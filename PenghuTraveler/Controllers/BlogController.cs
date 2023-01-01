@@ -12,7 +12,7 @@ namespace PenghuTraveler.Controllers
         /// 單篇文章
         /// </summary>
         /// <returns></returns>
-        public ActionResult Single()
+        public ActionResult Single(string id)
         {
             return View();
         }
@@ -21,9 +21,36 @@ namespace PenghuTraveler.Controllers
         /// 取得留言板列表資料
         /// </summary>
         /// <returns></returns>
-        public ActionResult GetMessageBoard(string id)
+        public ActionResult GetComments(string id)
         {
             return View();
+        }
+
+        /// <summary>
+        /// 新增留言
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult AddComments(string id)
+        {
+            return Json(true);
+        }
+
+        /// <summary>
+        /// 修改留言
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult EditComments(string id)
+        {
+            return Json(true);
+        }
+
+        /// <summary>
+        /// 刪除留言
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult DeleteComments(string id)
+        {
+            return Json(true);
         }
     }
 }

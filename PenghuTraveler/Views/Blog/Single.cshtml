@@ -1,4 +1,17 @@
-﻿<!-- ##### Single Blog Area Start ##### -->
+﻿<style>
+    .card .content {
+        margin-bottom: 0;
+    }
+
+    .card .time {
+        color: rgb(112, 112, 112);
+    }
+
+    .card-top {
+        justify-content: space-between;
+    }
+</style>
+<!-- ##### Single Blog Area Start ##### -->
 <div class="single-blog-wrapper section-padding-0-100">
     <div class="container">
         <div class="row">
@@ -19,6 +32,30 @@
                         <h4><a href="#" class="post-headline mb-0">隘門沙灘</a></h4>
                         <p>位在澎湖縣湖西鄉的隘門沙灘，是遊客來澎湖必去的景點之一，蔚藍的海水搭配蜿蜒乾淨的貝殼沙灘，有種來到度假勝地馬爾地夫的既視感，雖然疫情期間不能出國度假，但不妨也可以選擇到澎湖走走，拍照打卡，偽出國一下。隘門沙灘的海域相較於澎湖其他沙灘平靜且安全許多，因此許多人都會選擇來隘門沙灘玩水上活動，這邊的水上活動也是八面玲瓏，選擇非常多種，從香蕉船到拖曳傘，有許多設施可以暢玩，不敢玩水的人也可以留在沙灘玩排球、休憩，也可以到旁邊的林投公園散步喝喝咖啡，放鬆身心靈。晚上也有BBQ燒烤吃到飽，來到澎湖不吃一下當地的新鮮海鮮說不過去吧~不吃海鮮也有其他肉品可以選擇，在沙灘烤肉應該是蠻機會難得的體驗，也蠻有度假的氣氛！白天玩水，晚上吃燒烤，很適合一家人或一群朋友一天的行程。</p>
                     </div>
+                </div>
+                <div class="navbar navbar-expand-lg navbar-dark bg-primary">
+                    <nav class="container">
+                        <span class="navbar-brand mb-0 h1">留言板</span>
+                    </nav>
+                </div>
+                <div class="container">
+                    <form class="add-comment-form mt-4 mb-4">
+                        <div class="form-group">
+                            <label for="username">暱稱</label>
+                            <input class="form-control" id="username" name="userName" placeholder="請輸入暱稱" maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <label for="useremail">Email</label>
+                            <input class="form-control" id="useremail" name="userEmail" placeholder="請輸入Email" maxlength="30">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">留言</label>
+                            <textarea class="form-control" id="content" name="content" rows="8" cols="80" placeholder="想說什麼都可以"></textarea>
+                        </div>
+                        <div class="alert alert-danger" style="display: none;">請確認所有欄位皆已填寫!</div>
+                        <button type="button" class="btn btn-primary" onclick="addComment()">送出</button>
+                    </form>
+                    <div class="comments"></div>
                 </div>
             </div>
 
@@ -100,4 +137,93 @@
         </div>
     </div>
 </div>
-<!-- ##### Single Blog Area End ##### --> 
+<!-- ##### Single Blog Area End ##### -->
+@section Scripts
+{
+    <script>
+        // 網頁載入完畢執行
+        $(document).ready(() => {
+            getComments();
+        });
+
+        /** 取得留言 */
+        function getComments() {
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GetComments", "Blog")',
+                data: {
+                    id: '@Request.QueryString["id"]'
+                },
+                success: function (resp) {
+                    const comments = resp;
+                    for (let i = 0; i < comments.length; i++) {
+                        appendCommentToDOM(comments[i]);
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        /** 新增留言 */
+        function addComment() {
+            const userName = $('input[name=userName]').val();
+            const userEmail = $('input[name=userEmail]').val();
+            const content = $('textarea[name=content]').val();
+            if (username === '' || useremail === '' || content === '') {
+                $('.alert').show();
+                return;
+            }
+            $('.alert').hide();
+
+            const newComment = {
+                id: '@Request.QueryString["id"]',
+                userName,
+                userEmail,
+                content
+            };
+
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("AddComments", "Blog")',
+                data: newComment,
+                success: function (resp) {
+                    newComment.createdTime = resp.createdTime;
+                    appendCommentToDOM(newComment, true);
+                    $('input[name=userName]').val('');
+                    $('input[name=userEmail]').val('');
+                    $('textarea[name=content]').val('');
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        /**
+         * 插入DOM
+         * @@param comment {string} 內容
+         * @@param isPrepend {boolean} 是否插入在最上面
+         */
+        function appendCommentToDOM(comment, isPrepend) {
+            const commentsDOM = $('.comments');
+            const html = `
+    <div class="card m-2">
+      <div class="card-body">
+        <div class="card-top d-flex">
+          <h5 class="card-title"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;${comment.username}(${comment.userEmail})</h5>
+          <p class="card-text time">${comment.createdTime}</p>
+        </div>
+        <p class="card-text content">${comment.content}</p>
+        <input hidden value="${comment.id}"/>
+      </div>
+    </div>`;
+            if (isPrepend) {
+                commentsDOM.prepend(html);
+            } else {
+                commentsDOM.append(html);
+            }
+        }
+    </script>
+}

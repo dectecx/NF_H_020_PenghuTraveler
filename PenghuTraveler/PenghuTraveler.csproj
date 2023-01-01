@@ -252,6 +252,21 @@
     <Content Include="js\map-active.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\popper.min.js" />
+    <None Include="Views\Blog\Articles\aimenBeach.cshtml" />
+    <None Include="Views\Blog\Articles\BlueCave.cshtml" />
+    <None Include="Views\Blog\Articles\DongjiyuLighthouse.cshtml" />
+    <None Include="Views\Blog\Articles\DoubleHeartShihu.cshtml" />
+    <None Include="Views\Blog\Articles\duxing10thVillage.cshtml" />
+    <None Include="Views\Blog\Articles\erkanSettlementPreservationArea.cshtml" />
+    <None Include="Views\Blog\Articles\guanyinTemple.cshtml" />
+    <None Include="Views\Blog\Articles\LittleTaiwan.cshtml" />
+    <None Include="Views\Blog\Articles\mosesPartingSea.cshtml" />
+    <None Include="Views\Blog\Articles\NeianBeach.cshtml" />
+    <None Include="Views\Blog\Articles\paradiseRoad.cshtml" />
+    <None Include="Views\Blog\Articles\Sea-crossingBridge.cshtml" />
+    <None Include="Views\Blog\Articles\threeImmortalsPagoda.cshtml" />
+    <None Include="Views\Blog\Articles\TianhouTemple.cshtml" />
+    <None Include="Views\Blog\Articles\TianrenLake.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
