@@ -1,18 +1,198 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - 我的 ASP.NET 應用程式</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>隘門沙灘</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="@Url.Content("~/")img/core-img/PenghuTraveler_icon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/")css/style.css">
+
 </head>
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="original-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <!-- Breaking News Area -->
+                    <div class="col-12 col-sm-8">
+                        <div class="breaking-news-area">
+                            <!-- 跑馬燈-->
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">我在澎湖天氣晴</a></li>
+                                    <li><a href="#">澎湖好吃又好玩</a></li>
+                                    <li><a href="#">陽光沙灘仙人掌</a></li>
+                                    <li><a href="#">快來澎湖FUN一夏</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo Area -->
+        <div class="logo-area text-center">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12"> <a href="@Url.Action("Index", "Home")" class="original-logo"><img src="@Url.Content("~/")img/core-img/PenghuTraveler1.png" alt="回首頁"></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav Area -->
+        <div class="original-nav-area" id="stickyNav">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between">
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler"> <span class="navbarToggler"></span> </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu" id="originalNav">
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="@Url.Action("Index", "Home")">首頁</a></li>
+                                    <li>
+                                        <a href="#">澎湖景點</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">馬公市</a></li>
+                                            <li><a href="#">湖西鄉</a></li>
+                                            <li><a href="#">白沙鄉</a></li>
+                                            <li><a href="#">西嶼鄉</a></li>
+                                            <li><a href="#">七美鄉</a></li>
+                                            <li><a href="#">望安鄉</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">文章分類</a>
+                                        <div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">馬公市</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=guanyinTemple">觀音亭</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gTianhouTemple">天后宮</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gduxing10thVillage">篤行十村</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gTianrenLake">天人湖</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">湖西鄉</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gaimenBeach">隘門沙灘</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gmosesPartingSea">摩西分海</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">白沙鄉</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gparadiseRoad">後寮天堂路</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gSea-crossingBridge">跨海大橋</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">西嶼鄉</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gerkanSettlementPreservationArea">二崁聚落</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gNeianBeach">內垵沙灘</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gthreeImmortalsPagoda">外垵三仙塔</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">望安鄉</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gDongjiyuLighthouse">東吉嶼燈塔</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gBlueCave">西吉嶼藍洞</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li class="title">七美鄉</li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gDoubleHeartShihu">雙心石滬</a></li>
+                                                <li><a href="@Url.Action("Single", "Blog")?id=gLittleTaiwan">小台灣</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <!-- Search Form  -->
+                                <div id="search-wrapper">
+                                    <form action="#">
+                                        <input type="text" id="search" placeholder="Search something...">
+                                        <div id="close-icon"></div>
+                                        <input class="d-none" type="submit" value="">
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
     @RenderBody()
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Footer Nav Area -->
+                    <div class="classy-nav-container breakpoint-off">
+                        <!-- Classy Menu -->
+                        <nav class="classy-navbar justify-content-center">
+
+                            <!-- Navbar Toggler -->
+                            <div class="classy-navbar-toggler"> <span class="navbarToggler"><span></span><span></span><span></span></span> </div>
+
+                            <!-- Menu -->
+                            <div class="classy-menu">
+
+                                <!-- close btn -->
+                                <div class="classycloseIcon">
+                                    <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;
+        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="@Url.Content("~/")js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="@Url.Content("~/")js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="@Url.Content("~/")js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="@Url.Content("~/")js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="@Url.Content("~/")js/active.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

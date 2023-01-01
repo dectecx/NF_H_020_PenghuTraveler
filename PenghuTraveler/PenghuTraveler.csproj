@@ -117,6 +117,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -124,9 +125,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\classy-nav.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\style.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="fonts\stylesheet.css" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="html\aimenBeach.html" />
     <Content Include="html\BlueCave.html" />
     <Content Include="html\css\animate.css" />
@@ -209,6 +218,40 @@
     <Content Include="html\scss\_responsive.scss" />
     <Content Include="html\scss\_theme_color.scss" />
     <Content Include="html\style.css.map" />
+    <Content Include="img\bg-img\aimen_slide1.jpg" />
+    <Content Include="img\bg-img\aimen_slide2.JPG" />
+    <Content Include="img\bg-img\aimen_slide3.jpg" />
+    <Content Include="img\bg-img\b1.jpg" />
+    <Content Include="img\bg-img\b2.jpg" />
+    <Content Include="img\bg-img\b3.jpg" />
+    <Content Include="img\bg-img\b4.jpg" />
+    <Content Include="img\bg-img\b5.jpg" />
+    <Content Include="img\bg-img\mosesPartingSea_slide1.jpg" />
+    <Content Include="img\bg-img\mosesPartingSea_slide2.jpg" />
+    <Content Include="img\bg-img\slide1.jpg" />
+    <Content Include="img\bg-img\slide2.jpg" />
+    <Content Include="img\bg-img\slide3.jpg" />
+    <Content Include="img\blog-img\blog1.jpg" />
+    <Content Include="img\blog-img\blog2.jpg" />
+    <Content Include="img\blog-img\blog3.jpg" />
+    <Content Include="img\blog-img\blog4.jpg" />
+    <Content Include="img\blog-img\blog5.jpg" />
+    <Content Include="img\blog-img\sq1.jpg" />
+    <Content Include="img\blog-img\sq2.jpg" />
+    <Content Include="img\blog-img\sq3.jpg" />
+    <Content Include="img\blog-img\sq4.jpg" />
+    <Content Include="img\core-img\favicon.ico" />
+    <Content Include="img\core-img\logo.png" />
+    <Content Include="img\core-img\logo2.png" />
+    <Content Include="img\core-img\PenghuTraveler1.png" />
+    <Content Include="img\core-img\PenghuTraveler2.png" />
+    <Content Include="img\core-img\PenghuTraveler_icon.ico" />
+    <Content Include="js\active.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery\jquery-2.2.4.min.js" />
+    <Content Include="js\map-active.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\popper.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -227,7 +270,31 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\helvetica_neu_bold-webfont.ttf" />
+    <Content Include="fonts\helvetica_neu_bold-webfont.woff" />
+    <Content Include="fonts\helvetica_neu_bold-webfont.woff2" />
+    <Content Include="fonts\helveticaneue_medium-webfont.ttf" />
+    <Content Include="fonts\helveticaneue_medium-webfont.woff" />
+    <Content Include="fonts\helveticaneue_medium-webfont.woff2" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <Content Include="img\core-img\PenghuTraveler_icon.psd" />
+    <Content Include="img\core-img\PenghuTraveler1.psd" />
+    <Content Include="img\core-img\PenghuTraveler2.psd" />
+    <Content Include="css\style.css.map" />
     <None Include="packages.config" />
+    <Content Include="scss\_fonts.scss" />
+    <Content Include="scss\_mixin.scss" />
+    <Content Include="scss\_responsive.scss" />
+    <Content Include="scss\_theme_color.scss" />
+    <Content Include="scss\style.scss" />
+    <Content Include="Views\Blog\Single.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
