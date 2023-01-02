@@ -13,9 +13,8 @@ namespace PenghuTraveler.Controllers
         /// 單篇文章
         /// </summary>
         /// <returns></returns>
-        public ActionResult Single(string viewName)
+        public ActionResult Single()
         {
-            ViewBag.ViewName = viewName;
             return View();
         }
 

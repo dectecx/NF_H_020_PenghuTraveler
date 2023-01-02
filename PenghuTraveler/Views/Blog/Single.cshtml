@@ -1,5 +1,11 @@
 ﻿@{ 
     string viewName = Request.QueryString["viewName"];
+
+    if (string.IsNullOrWhiteSpace(viewName))
+    {
+        // 預設值
+        viewName = "aimenBeach";
+    }
 }
 
 <style>
