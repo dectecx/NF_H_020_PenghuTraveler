@@ -286,21 +286,21 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
-    <None Include="Views\Blog\Articles\aimenBeach.cshtml" />
-    <None Include="Views\Blog\Articles\BlueCave.cshtml" />
-    <None Include="Views\Blog\Articles\DongjiyuLighthouse.cshtml" />
-    <None Include="Views\Blog\Articles\DoubleHeartShihu.cshtml" />
-    <None Include="Views\Blog\Articles\duxing10thVillage.cshtml" />
-    <None Include="Views\Blog\Articles\erkanSettlementPreservationArea.cshtml" />
-    <None Include="Views\Blog\Articles\guanyinTemple.cshtml" />
-    <None Include="Views\Blog\Articles\LittleTaiwan.cshtml" />
-    <None Include="Views\Blog\Articles\mosesPartingSea.cshtml" />
-    <None Include="Views\Blog\Articles\NeianBeach.cshtml" />
-    <None Include="Views\Blog\Articles\paradiseRoad.cshtml" />
-    <None Include="Views\Blog\Articles\Sea-crossingBridge.cshtml" />
-    <None Include="Views\Blog\Articles\threeImmortalsPagoda.cshtml" />
-    <None Include="Views\Blog\Articles\TianhouTemple.cshtml" />
-    <None Include="Views\Blog\Articles\TianrenLake.cshtml" />
+    <Content Include="Views\Blog\Articles\BlueCave.cshtml" />
+    <Content Include="Views\Blog\Articles\NeianBeach.cshtml" />
+    <Content Include="Views\Blog\Articles\mosesPartingSea.cshtml" />
+    <Content Include="Views\Blog\Articles\LittleTaiwan.cshtml" />
+    <Content Include="Views\Blog\Articles\guanyinTemple.cshtml" />
+    <Content Include="Views\Blog\Articles\erkanSettlementPreservationArea.cshtml" />
+    <Content Include="Views\Blog\Articles\duxing10thVillage.cshtml" />
+    <Content Include="Views\Blog\Articles\DoubleHeartShihu.cshtml" />
+    <Content Include="Views\Blog\Articles\DongjiyuLighthouse.cshtml" />
+    <Content Include="Views\Blog\Articles\TianhouTemple.cshtml" />
+    <Content Include="Views\Blog\Articles\threeImmortalsPagoda.cshtml" />
+    <Content Include="Views\Blog\Articles\Sea-crossingBridge.cshtml" />
+    <Content Include="Views\Blog\Articles\paradiseRoad.cshtml" />
+    <Content Include="Views\Blog\Articles\aimenBeach.cshtml" />
+    <Content Include="Views\Blog\Articles\TianrenLake.cshtml" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
